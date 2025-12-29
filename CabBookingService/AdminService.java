@@ -1,0 +1,20 @@
+public class AdminService {
+
+    public static void showDashboard(
+            java.util.ArrayList<User> users,
+            java.util.ArrayList<Booking> bookings) {
+
+        double totalRevenue = 0;
+
+        System.out.println("\n===== ADMIN DASHBOARD =====");
+        System.out.println("Total Users: " + users.size());
+        System.out.println("Total Bookings: " + bookings.size());
+
+        for (Booking b : bookings) {
+            totalRevenue += b.fare;
+        }
+
+        System.out.println("Total Revenue: ₹" + totalRevenue);
+        System.out.println("===========================\n");
+    }
+}
